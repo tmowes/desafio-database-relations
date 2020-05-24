@@ -4,18 +4,22 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-} from 'typeorm';
+} from 'typeorm'
 
-class Customer {
-  id: string;
+@Entity('customers')
+export default class Customer {
+  @PrimaryGeneratedColumn('uuid')
+  id: string
 
-  name: string;
+  @Column()
+  name: string
 
-  email: string;
+  @Column()
+  email: string
 
-  created_at: Date;
+  @CreateDateColumn()
+  created_at: Date
 
-  updated_at: Date;
+  @UpdateDateColumn()
+  updated_at: Date
 }
-
-export default Customer;

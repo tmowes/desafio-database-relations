@@ -1,4 +1,4 @@
 export default interface IUpdateProductsQuantityDTO {
-  id: string;
-  quantity: number;
+  id: string
+  quantity: number
 }

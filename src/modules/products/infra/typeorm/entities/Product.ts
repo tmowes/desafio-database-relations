@@ -5,24 +5,29 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   OneToMany,
-} from 'typeorm';
+} from 'typeorm'
 
-import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProducts';
+import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProducts'
+@Entity('products')
+export default class Product {
+  @PrimaryGeneratedColumn('uuid')
+  id: string
 
-class Product {
-  id: string;
+  @Column()
+  name: string
 
-  name: string;
+  @Column({ type: 'decimal', precision: 10, scale: 2 })
+  price: number
 
-  price: number;
+  @Column('int')
+  quantity: number
 
-  quantity: number;
+  @OneToMany(() => OrdersProducts, order_products => order_products.product)
+  order_products: OrdersProducts[]
 
-  order_products: OrdersProducts[];
+  @CreateDateColumn()
+  created_at: Date
 
-  created_at: Date;
-
-  updated_at: Date;
+  @UpdateDateColumn()
+  updated_at: Date
 }
-
-export default Product;
