@@ -64,3 +64,30 @@ git add .
 git commit -m 'message'
 git push
 ```
+
+### Testes finalizados
+
+```
+PS H:\React\DesafiosGoStack\desafio-database-relations> yarn test
+yarn run v1.22.4
+$ cross-env NODE_ENV=test jest
+ PASS  src/__tests__/App.spec.ts
+  App
+    √ should be able to create a new customer (41ms)
+    √ should not be able to create a customer with one e-mail thats already registered (19ms)
+    √ should be able to create a new product (24ms)
+    √ should not be able to create a customer with one e-mail thats already registered (17ms)
+    √ should be able to create a new order (55ms)
+    √ should not be able to create an order with a invalid customer (9ms)
+    √ should not be able to create an order with invalid products (19ms)
+    √ should not be able to create an order with products with insufficient quantities (41ms)
+    √ should be able to subtract an product total quantity when it is ordered (58ms)
+    √ should be able to list one specific order (44ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        1.901s, estimated 5s
+Ran all test suites.
+Done in 2.63s.
+```
