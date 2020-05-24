@@ -7,7 +7,6 @@ https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-data
 https://github.com/Rocketseat/gostack-template-typeorm-relations/generate
 
 ```
-cd H:\React\DesafiosGoStack\desafio-database-relations
 git clone https://github.com/tmowes/go-barber-node.git
 ```
 
@@ -68,7 +67,7 @@ git push
 ### Testes finalizados
 
 ```
-PS H:\React\DesafiosGoStack\desafio-database-relations> yarn test
+PS \desafio-database-relations> yarn test
 yarn run v1.22.4
 $ cross-env NODE_ENV=test jest
  PASS  src/__tests__/App.spec.ts
